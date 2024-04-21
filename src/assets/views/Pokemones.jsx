@@ -13,7 +13,7 @@ const Pokemones = () => {
     useEffect(() => {
         const pokemonList = async () => {
             try {
-                const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=300');
+                const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1302');
                 const data = await res.json();
                 const dataPokemon = data.results.map((pokemon) => pokemon.name);
                 setPokemonData(dataPokemon);
